@@ -1,0 +1,49 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:  border-box;
+}
+/*Por padrão as DIVs são display block, fica um item embaixo do outro,bloqueando a linha */
+
+.container {
+    background-color: #1e293b ;
+    height: 100vh; /*Ocupar toda tela*/
+    width: 100vw; /*Ocupar toda tela*/
+    padding: 10px;
+    display: flex; /*deixa os itens lado a lado em uma linha*/
+
+   flex-direction: norow ;/* flex-direction DETERMINA A POSIÇÃO DO ITEM,por padrão é 
+    row = linha mas tem tbm o 
+    row-reverse = inverte os itens ao lado direito da tela invertendo a posição.
+    */
+
+    /* flex-wrap:nowrap ; /* flex-wrap por padrão é "nowrap" faz com os itens não sejam maiores que seus pais."wrap" liberta os itens deixando crescer mais que os pais, e ainda o "wrap-reverse que inverte as posições dos itens"
+    */
+
+    /*flex-flow: column wrap ; /*é como um atalho para  flex-direction: column;
+    flex-wrap:wrap; em uma unica linha*/
+
+    justify-content: center;/* VAI SEMPRE CUIDAR DO EIXO PRINCIPAL
+    flex-start= todos no começo (lado esquerdo)
+    flex-end = todos no final ( lado direito)
+    center = centraliza td ao centro
+    space-between = espaça todos os itens 
+    space-around = o primeiro e ultimo item terão espaçamentos menor que os iten entre eles.
+    space-evenly = o msm espaçamento entre todos os itens
+    */
+
+     /*OBS: qndo  o flex-direction:row -> o eixo principal é HORIZONTAL, qndo está como flex-direction:column o eito principal é o VERTICAL*/
+    align-items:center ; /* VAI SEMPRE CUIDAR DO EIXO SECUNDARIO, POSSUI os msms paramentros que o justify-content
+    */
+}
+
+.item {
+    background-color: blueviolet;
+    margin: 10px;
+    color: beige;
+    font-size: 22px;
+    border-radius: 5px;
+    width:70px ;
+    height:70px;
+}
+
